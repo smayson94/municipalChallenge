@@ -1,0 +1,22 @@
+<html>
+	<body>
+        <h2>Hello, {{username}}!</h2>
+        {%for i in range(0, len)%}
+        {% if jobResults[i].get('data') %}
+  
+<div class="card">
+            <div class="card-body">
+
+            <p class="mb-1" style="font-weight: bold;">Ticker:{{jobResults[i].get('data')[0].get('name')}}</p>
+            <p>{{Ids[i].get('idValue')}}</p>
+	        <p> Name: {{jobResults[i].get('data')[0].get('name')}}</p>
+	        <p>Market Sector: {{jobResults[i].get('data')[0].get('marketSector')}}</p>
+	        <p>Security Type: {{jobResults[i].get('data')[0].get('securityType')}}</p>
+	        <p>Exchange Code: {{jobResults[i].get('data')[0].get('exchCode')}}</p>
+            </div>
+          </div>
+        {% endif %}
+        {%endfor%}
+    </body>
+</html>
+
